@@ -21,7 +21,7 @@ func (gammaRate *GammaRate) addZero(zero int) {
 	gammaRate.zeros++
 }
 
-func (gammaRate *GammaRate) sameNumberOfBits() bool {
+func (gammaRate *GammaRate) hasSameNumberOfBits() bool {
 	return gammaRate.zeros == gammaRate.ones
 }
 
@@ -112,7 +112,7 @@ func calculateRating(columnIndex int, binaryNumbers [][]string, bitTypeOfInteres
 		bitOfInterest = gammaRate.getLeastCommonBit()
 	}
 
-	if gammaRate.sameNumberOfBits() {
+	if gammaRate.hasSameNumberOfBits() {
 		bitOfInterest = bitToUseInCaseOfEquality
 	}
 
