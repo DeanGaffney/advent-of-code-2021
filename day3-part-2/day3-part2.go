@@ -8,12 +8,6 @@ import (
 	"strconv"
 )
 
-type IGammaRate interface {
-	addOne(int)
-	addZero(int)
-	getMostCommonBit() string
-}
-
 type GammaRate struct {
 	ones  int
 	zeros int
